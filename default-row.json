@@ -1,0 +1,170 @@
+{
+  "config": {
+    "kind": "replay",
+    "period": "peak_heat_day",
+    "step": 300,
+    "out": "results/air-tolerance-034",
+    "events": "data/air-oracle-032/peak_oracle_mpc/events.json",
+    "id": "mpc_replay_tol1e-06",
+    "rtol": 1e-06
+  },
+  "scenario": {
+    "electricity_price": "highly_dynamic",
+    "time_period": "peak_heat_day",
+    "temperature_uncertainty": null,
+    "solar_uncertainty": null,
+    "seed": null
+  },
+  "kpis": {
+    "tdis_tot": 30.06016228177151,
+    "idis_tot": 1301.7641084142424,
+    "ener_tot": 3.860398580744057,
+    "cost_tot": 0.016202423332712348,
+    "emis_tot": 0.812427738351616,
+    "pele_tot": 0.010485680767455898,
+    "pgas_tot": 0.10713087327391908,
+    "pdih_tot": null,
+    "time_rat": 8.6700434248254e-07
+  },
+  "mapping": {
+    "case": "bestest_air",
+    "temperature_points": {
+      "AirZoneTemperature[1]": [
+        "zon_reaTRooAir_y"
+      ]
+    },
+    "energy_sources": {
+      "ElectricPower": [
+        "fcu_reaPCoo_y",
+        "fcu_reaPFan_y"
+      ],
+      "GasPower": [
+        "fcu_reaPHea_y"
+      ]
+    },
+    "compressor_commands": [],
+    "heating_setpoints": [
+      "con_oveTSetHea_u"
+    ],
+    "supported_by_current_heat_pump_controller": false,
+    "required_price_sources": {
+      "ElectricPower": "PriceElectricPowerHighlyDynamic",
+      "GasPower": "PriceGasPower",
+      "DistrictHeatingPower": "PriceDistrictHeatingPower"
+    },
+    "semantic_source": "public FMU KPI tags + FMI units/descriptions/bounds; no hidden physical states",
+    "transfer_block": "Current direct compressor controller requires an actuator/energy adapter; metadata alone does not supply plant dynamics."
+  },
+  "identification": {
+    "warmup_only": true,
+    "transitions": 7,
+    "lags_seconds": [
+      270.0,
+      270.0,
+      300.0,
+      270.0,
+      270.0,
+      270.0,
+      180.0
+    ],
+    "lead_seconds": 900.0
+  },
+  "kpi_json": {
+    "AirZoneTemperature[1]": [
+      "zon_reaTRooAir_y"
+    ],
+    "None": [
+      "fcu_reaFloSup_y",
+      "zon_reaPLig_y",
+      "zon_reaPPlu_y",
+      "zon_weaSta_reaWeaCeiHei_y",
+      "zon_weaSta_reaWeaCloTim_y",
+      "zon_weaSta_reaWeaHDifHor_y",
+      "zon_weaSta_reaWeaHDirNor_y",
+      "zon_weaSta_reaWeaHGloHor_y",
+      "zon_weaSta_reaWeaHHorIR_y",
+      "zon_weaSta_reaWeaLat_y",
+      "zon_weaSta_reaWeaLon_y",
+      "zon_weaSta_reaWeaNOpa_y",
+      "zon_weaSta_reaWeaNTot_y",
+      "zon_weaSta_reaWeaPAtm_y",
+      "zon_weaSta_reaWeaRelHum_y",
+      "zon_weaSta_reaWeaSolAlt_y",
+      "zon_weaSta_reaWeaSolDec_y",
+      "zon_weaSta_reaWeaSolHouAng_y",
+      "zon_weaSta_reaWeaSolTim_y",
+      "zon_weaSta_reaWeaSolZen_y",
+      "zon_weaSta_reaWeaTBlaSky_y",
+      "zon_weaSta_reaWeaTDewPoi_y",
+      "zon_weaSta_reaWeaTDryBul_y",
+      "zon_weaSta_reaWeaTWetBul_y",
+      "zon_weaSta_reaWeaWinDir_y",
+      "zon_weaSta_reaWeaWinSpe_y"
+    ],
+    "ElectricPower": [
+      "fcu_reaPCoo_y",
+      "fcu_reaPFan_y"
+    ],
+    "GasPower": [
+      "fcu_reaPHea_y"
+    ],
+    "CO2Concentration[1]": [
+      "zon_reaCO2RooAir_y"
+    ]
+  },
+  "inputs": {
+    "con_oveTSetCoo_activate": {
+      "Unit": null,
+      "Description": "Activation for Zone temperature setpoint for cooling",
+      "Minimum": null,
+      "Maximum": null
+    },
+    "con_oveTSetCoo_u": {
+      "Unit": "K",
+      "Description": "Zone temperature setpoint for cooling",
+      "Minimum": 278.15,
+      "Maximum": 308.15
+    },
+    "con_oveTSetHea_activate": {
+      "Unit": null,
+      "Description": "Activation for Zone temperature setpoint for heating",
+      "Minimum": null,
+      "Maximum": null
+    },
+    "con_oveTSetHea_u": {
+      "Unit": "K",
+      "Description": "Zone temperature setpoint for heating",
+      "Minimum": 278.15,
+      "Maximum": 308.15
+    },
+    "fcu_oveFan_activate": {
+      "Unit": null,
+      "Description": "Activation for Fan control signal as air mass flow rate normalized to the design air mass flow rate",
+      "Minimum": null,
+      "Maximum": null
+    },
+    "fcu_oveFan_u": {
+      "Unit": "1",
+      "Description": "Fan control signal as air mass flow rate normalized to the design air mass flow rate",
+      "Minimum": 0.0,
+      "Maximum": 1.0
+    },
+    "fcu_oveTSup_activate": {
+      "Unit": null,
+      "Description": "Activation for Supply air temperature setpoint",
+      "Minimum": null,
+      "Maximum": null
+    },
+    "fcu_oveTSup_u": {
+      "Unit": "K",
+      "Description": "Supply air temperature setpoint",
+      "Minimum": 285.15,
+      "Maximum": 313.15
+    }
+  },
+  "trajectory": "data/air-oracle-032/mpc_replay_tol1e-06/trajectory.npz",
+  "hidden": "data/air-oracle-032/mpc_replay_tol1e-06/hidden.npz",
+  "actual_cs_rel_tol": 1e-06,
+  "wall_seconds": 107.39431689699995,
+  "scope": "Oracle diagnostic using hidden states and/or native future thermal input; inadmissible controller"
+}

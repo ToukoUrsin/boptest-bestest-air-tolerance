@@ -1,0 +1,74 @@
+{
+  "rows": [
+    {
+      "id": "mpc_replay_tol1e-06",
+      "rtol": 1e-06,
+      "kpis": {
+        "tdis_tot": 30.06016228177151,
+        "idis_tot": 1301.7641084142424,
+        "ener_tot": 3.860398580744057,
+        "cost_tot": 0.016202423332712348,
+        "emis_tot": 0.812427738351616,
+        "pele_tot": 0.010485680767455898,
+        "pgas_tot": 0.10713087327391908,
+        "pdih_tot": null,
+        "time_rat": 8.6700434248254e-07
+      },
+      "scored_pressure_drop_Pa": 468.57057645094756,
+      "scored_fan_mass_loss_kg": 0.002543437621988831,
+      "command_trace_sha256": "ac363b1baa547e48edaab7bcd05857091d61a76c0dbf425bca96073d4cbb3de8",
+      "identical_original_commands": true,
+      "mass_mutation_rejected": true,
+      "wall_seconds": 107.39431689699995
+    },
+    {
+      "id": "mpc_replay_tol1e-08",
+      "rtol": 1e-08,
+      "kpis": {
+        "tdis_tot": 30.38744526521441,
+        "idis_tot": 1220.1738669392134,
+        "ener_tot": 3.8604822461032984,
+        "cost_tot": 0.016173451832467482,
+        "emis_tot": 0.8118647521545432,
+        "pele_tot": 0.0104758966737215,
+        "pgas_tot": 0.1071710785065384,
+        "pdih_tot": null,
+        "time_rat": 9.727062031972953e-07
+      },
+      "scored_pressure_drop_Pa": 1.3919572041049832,
+      "scored_fan_mass_loss_kg": 7.555652230539778e-06,
+      "command_trace_sha256": "ac363b1baa547e48edaab7bcd05857091d61a76c0dbf425bca96073d4cbb3de8",
+      "identical_original_commands": true,
+      "mass_mutation_rejected": true,
+      "wall_seconds": 145.21269318799932
+    },
+    {
+      "id": "mpc_replay_tol1e-10",
+      "rtol": 1e-10,
+      "kpis": {
+        "tdis_tot": 30.388348993504362,
+        "idis_tot": 1219.9494072499203,
+        "ener_tot": 3.8604823886264583,
+        "cost_tot": 0.016173370743655057,
+        "emis_tot": 0.8118631585970609,
+        "pele_tot": 0.010475871655696339,
+        "pgas_tot": 0.1071711863989036,
+        "pdih_tot": null,
+        "time_rat": 8.692410569288373e-07
+      },
+      "scored_pressure_drop_Pa": 0.001740794992656447,
+      "scored_fan_mass_loss_kg": 9.449170890185599e-09,
+      "command_trace_sha256": "ac363b1baa547e48edaab7bcd05857091d61a76c0dbf425bca96073d4cbb3de8",
+      "identical_original_commands": true,
+      "mass_mutation_rejected": true,
+      "wall_seconds": 195.3925131799988
+    }
+  ],
+  "fresh_public_fmu_blob_versions": {
+    "master": "84db75c5026b6744fedf457b333be5354b145f1f",
+    "v090": "84db75c5026b6744fedf457b333be5354b145f1f"
+  },
+  "delta_default_to_1e10_idis": 81.81470116432206,
+  "relative_default_iaq_excess": 0.06706401157139252,
+  "scope": "Identical frozen replay commands; different internal tolerance during warmup andscore. Diagnostic only; no changed-default controller admission."
+}
